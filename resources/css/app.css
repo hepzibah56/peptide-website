@@ -1,0 +1,95 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/switzer-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/switzer-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Switzer';
+    src: url('/fonts/switzer-bold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gambetta';
+    src: url('/fonts/gambetta-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gambetta';
+    src: url('/fonts/gambetta-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@theme {
+    --color-glacier: #8CCBEB;
+    --color-glacier-mist: #DCEFF9;
+    --color-fjord-ink: #0F2B3D;
+    --color-deep-water: #0C2433;
+    --color-frost: #F1F7FA;
+    --color-borosilicate: #C9DAE3;
+    --color-tide: #2A769F;
+    --color-amber-glass: #C27A2C;
+    --color-success: #2F7D5B;
+    --color-error: #B3412F;
+
+    --font-sans: 'Switzer', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Gambetta', ui-serif, Georgia, serif;
+
+    --radius-input: 2px;
+    --radius-media: 10px;
+    --radius-pill: 999px;
+}
+
+@layer base {
+    :root {
+        --glacier: #8CCBEB;
+        --glacier-mist: #DCEFF9;
+        --fjord-ink: #0F2B3D;
+        --deep-water: #0C2433;
+        --frost: #F1F7FA;
+        --borosilicate: #C9DAE3;
+        --tide: #2A769F;
+        --amber-glass: #C27A2C;
+        --success: #2F7D5B;
+        --error: #B3412F;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        background: var(--frost);
+        color: var(--fjord-ink);
+        line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+        color: var(--fjord-ink);
+        line-height: 1.15;
+        font-weight: 700;
+    }
+
+    a {
+        color: var(--tide);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    a:hover { color: var(--fjord-ink); }
+
+    .tabular {
+        font-variant-numeric: tabular-nums;
+    }
+}
